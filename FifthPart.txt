@@ -1,0 +1,6 @@
+#Fifth Part
+import matplotlib.pyplot as plt
+plt.imshow(x_test[18],cmap=plt.cm.binary)
+plt.show()
+
+#Using the matplotlib to show or ploting the image 
