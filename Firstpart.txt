@@ -1,0 +1,18 @@
+import tensorflow as tf
+fashion_mnist=tf.keras.datasets.fashion_mnist
+(x_train,y_train) , (x_test,y_test)=fashion_mnist.load_data() #Loading MNIST Datasets
+x_train=tf.keras.utils.normalize(x_train,axis=1)# Normalizing training data
+x_test=tf.keras.utils.normalize(x_test,axis=1)# Normalizing test data
+models=tf.keras.models.Sequential() #sequential model
+models.add(tf.keras.layers.Flatten()) #InputLayer
+models.add(tf.keras.layers.Dense(128,activation=tf.nn.relu)) #1st HiddenLayer
+models.add(tf.keras.layers.Dense(128,activation=tf.nn.relu)) #2nd HiddenLayer
+models.add(tf.keras.layers.Dense(10,activation=tf.nn.softmax)) #OutputLayer
+models.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
+models.fit(x_train,y_train,epochs=5)
+
+In the first Part it start from loading the fashion_mnist dataset using the load_data() 
+keywords,before that you have to import two best libraries for computer Vision those are 
+tensorflow and keras for importing the layers and model that is Sequencial over here and 
+we have used flatten layer for first and followed by two dense layers with 128 units and it
+ends up with a dense output layer ,here the adam optimizer has been used with 5epochs.
