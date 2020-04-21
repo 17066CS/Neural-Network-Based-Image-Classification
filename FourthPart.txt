@@ -1,0 +1,9 @@
+#Fourth Part
+list1=['T-shirt','Trouser','Pullover','Dress','Coat','Sandal','Shirt','Sneaker','Bag','Ankle boot']
+import numpy as nm
+a=nm.argmax(predict1[18])
+print(list1[a])
+
+#Since the fashion_mnist dataset is been divided into 10 categories as the above in list1 with 
+matching with the index positions ,with using  argmax of numpy with predict1 and printing the
+correct fashion category.
