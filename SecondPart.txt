@@ -1,0 +1,5 @@
+#Second Part
+loss1,acc=models.evaluate(x_test,y_test)
+print(loss1,acc)
+
+#over here the model has been evaluated based on test datasets and printed loss and accuracy
